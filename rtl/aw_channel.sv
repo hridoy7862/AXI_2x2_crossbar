@@ -124,8 +124,14 @@ module aw_channel
     // Each master's FIFO head address is decoded independently
     target_slave_e m0_target, m1_target;
 
-    axi_decoder u_dec_m0 (.addr(m0_head_addr), .target_slave(m0_target));
-    axi_decoder u_dec_m1 (.addr(m1_head_addr), .target_slave(m1_target));
+    axi_decoder u_dec_m0 (
+      .addr(m0_head_addr), 
+      .target_slave(m0_target)
+      );
+    axi_decoder u_dec_m1 (
+      .addr(m1_head_addr), 
+      .target_slave(m1_target)
+      );
 
     // STEP 4: Build request vectors for each slave arbiter
     // req_s0[0] = M0 has a valid AW entry targeting S0

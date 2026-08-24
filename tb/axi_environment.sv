@@ -17,9 +17,15 @@ class axi_environment;
 
   function new(virtual axi_if axi_intf);
     $display("@[%0t] :: INSIDE AXI ENVIRONMENT CONSTRUCTOR", $time);
-    m0_aw_gen2drv_mb = new(); m0_w_gen2drv_mb = new(); m0_ar_gen2drv_mb = new();
-    m1_aw_gen2drv_mb = new(); m1_w_gen2drv_mb = new(); m1_ar_gen2drv_mb = new();
-    in_mon2ref_mb    = new(); ref2scb_mb = new(); out_mon2scb_mb = new();
+    m0_aw_gen2drv_mb = new(); 
+    m0_w_gen2drv_mb = new(); 
+    m0_ar_gen2drv_mb = new();
+    m1_aw_gen2drv_mb = new(); 
+    m1_w_gen2drv_mb = new(); 
+    m1_ar_gen2drv_mb = new();
+    in_mon2ref_mb    = new(); 
+    ref2scb_mb = new(); 
+    out_mon2scb_mb = new();
 
     axi_m0_agnt = new(axi_intf, m0_aw_gen2drv_mb, m0_w_gen2drv_mb, m0_ar_gen2drv_mb, in_mon2ref_mb, out_mon2scb_mb);
     axi_m1_agnt = new(axi_intf, m1_aw_gen2drv_mb, m1_w_gen2drv_mb, m1_ar_gen2drv_mb, in_mon2ref_mb, out_mon2scb_mb);

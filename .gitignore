@@ -1,0 +1,35 @@
+# Vivado generated files
+.Xil/
+*.jou
+*.log
+*.str
+*.pb
+
+# Vivado generated directories
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# XSim generated files
+xsim.dir/
+*.wdb
+*.vcd
+
+# Simulation generated files
+sim/.Xil/
+sim/xsim.dir/
+sim/work/
+sim/*.log
+sim/*.jou
+sim/*.pb
+sim/*.wdb
+sim/*.vcd
+sim/xsim_*.backup.*
+
+# Temporary/editor files
+*.swp
+*~
+.DS_Store

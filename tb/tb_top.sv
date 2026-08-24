@@ -1,5 +1,3 @@
-//`timescale 1ns/1ps
-
 module tb_top;
   import axi_crossbar_pkg::*;
   import axi_test_lib_pkg::*;
@@ -292,7 +290,8 @@ module tb_top;
     end
     else if ($test$plusargs("m1_write_s0")) begin 
       t03 = new(vif); 
-      t03.run(); end
+      t03.run(); 
+    end
     else if ($test$plusargs("m1_write_s1")) begin 
       t04 = new(vif); 
       t04.run(); 
@@ -363,9 +362,10 @@ module tb_top;
     $finish;
   end
 
- // initial begin
-   // #2000000;
-   // $fatal(1, "TB TIMEOUT");
- // end
+  /*initial begin
+    #2000000;
+    $fatal(1, "TB TIMEOUT");
+  end
+  */
 endmodule
 

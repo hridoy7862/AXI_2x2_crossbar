@@ -30,12 +30,13 @@ module r_channel
   input  logic                  dm_rvalid,
   output logic                  dm_rready,
 
-  // Outstanding tracker
+  /*/ Outstanding tracker
   output logic [ID_WIDTH_S-1:0] ostnd_lookup_rid,
   input  logic                  ostnd_lookup_master,
   input  logic                  ostnd_lookup_hit,
   output logic [ID_WIDTH_S-1:0] ostnd_clear_rid,
   output logic                  ostnd_clear_valid,
+  */
 
   // Master 0 R
   output logic [ID_WIDTH-1:0]   m0_rid,
@@ -136,10 +137,10 @@ module r_channel
 
 
   // Unpack slave FIFO heads
-  logic [ID_WIDTH_S-1:0] s0h_rid,  s1h_rid,  dmh_rid;
-  logic [DATA_WIDTH-1:0] s0h_rdata,s1h_rdata,dmh_rdata;
-  logic [1:0]            s0h_rresp,s1h_rresp,dmh_rresp;
-  logic                  s0h_rlast,s1h_rlast,dmh_rlast;
+  logic [ID_WIDTH_S-1:0] s0h_rid,   s1h_rid,    dmh_rid;
+  logic [DATA_WIDTH-1:0] s0h_rdata, s1h_rdata,  dmh_rdata;
+  logic [1:0]            s0h_rresp, s1h_rresp,  dmh_rresp;
+  logic                  s0h_rlast, s1h_rlast,  dmh_rlast;
 
   assign {s0h_rid,s0h_rdata,s0h_rresp,s0h_rlast} = s0_f_rd_data;
   assign {s1h_rid,s1h_rdata,s1h_rresp,s1h_rlast} = s1_f_rd_data;

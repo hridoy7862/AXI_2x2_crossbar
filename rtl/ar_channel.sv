@@ -151,7 +151,6 @@ module ar_channel
   // STEP 6: AR FSM per slave
   //   IDLE: latch grant, move to ACTIVE
   //   ACTIVE: hold on slave AR port, wait for ARREADY
-  //   On ARREADY: pop AR FIFO, write outstanding tracker, go IDLE
  
   typedef enum logic [1:0] {
         AR_IDLE   = 2'b00,
