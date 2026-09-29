@@ -29,8 +29,9 @@ The design was developed in **SystemVerilog**, verified using a **class-based Sy
 # 🏗️ Top-Level Architecture
 
 The following diagram shows the complete architecture of the AXI4 Crossbar.
+<img width="1872" height="1862" alt="Untitled Diagram-top_level_architecture" src="https://github.com/user-attachments/assets/f8a8e374-dec1-4dd4-b70a-8ff14458662b" />
 
-![AXI 2×2 Crossbar Top-Level Architecture](docs/images/top_level_architecture.png)
+
 
 ### Main architectural components
 
